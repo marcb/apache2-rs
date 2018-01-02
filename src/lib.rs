@@ -110,6 +110,7 @@ macro_rules! _declare_module_impl {
       $register_hooks:expr
    ) => {
       #[allow(unused_unsafe)]
+      #[allow(non_upper_case_globals)]
       #[no_mangle]
       pub static mut $module: $crate::ffi::module = $crate::ffi::module {
          version: $crate::ffi::MODULE_MAGIC_NUMBER_MAJOR,
@@ -623,6 +624,7 @@ macro_rules! _declare_directive_array {
    };
 
    ($directives_name:ident, [ ]) => {
+      #[allow(non_upper_case_globals)]
       static mut $directives_name: [$crate::ffi::command_rec; 1] = [
          _null_command_rec!()
       ];
@@ -661,6 +663,7 @@ macro_rules! _declare_directive_array {
    };
 
    ($directives_name:ident, $cmd_count:expr, [ $($cmd:tt),* ]) => {
+      #[allow(non_upper_case_globals)]
       static mut $directives_name: [$crate::ffi::command_rec; $cmd_count] = [
          $( _declare_command_rec!($cmd) ),*,
          _null_command_rec!()
