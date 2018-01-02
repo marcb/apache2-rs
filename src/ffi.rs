@@ -1,4 +1,4 @@
-#![allow(raw_pointer_derive)]
+// #![allow(raw_pointer_derive)]
 #![allow(non_camel_case_types)]
 
 use std::mem;

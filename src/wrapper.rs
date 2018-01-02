@@ -1,4 +1,4 @@
-#![allow(raw_pointer_derive)]
+// #![allow(raw_pointer_derive)]
 
 use std::str;
 use std::ffi::CStr;
