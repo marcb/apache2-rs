@@ -5,6 +5,8 @@ the Rust programming language.
 
 *NOTE: The library is still in early development phase – extensive documentation will be provided soon after the basic features are implemented*
 
+*Currently requires rust nightly*
+
 Here is a small example of what an Apache Rust module code looks like:
 
 ```rust
