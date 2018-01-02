@@ -24,7 +24,7 @@ fn https_www_handler(r: &mut Request) -> Result<Status, ()> {
    };
 
    let full_hostname = if already_www {
-      String::from_str(hostname)
+      String::from(hostname)
    } else {
       format!("www.{}", hostname)
    };
