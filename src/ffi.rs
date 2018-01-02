@@ -167,7 +167,7 @@ pub struct apr_sockaddr_t {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct apr_sockaddr_sa_t {
-    pub _bindgen_data_: [u64; 16usize],
+    pub _bindgen_data_: [*mut c_void; 1usize],
 }
 impl apr_sockaddr_sa_t {
    pub unsafe fn sin(&mut self) -> *mut sockaddr_in {
@@ -538,7 +538,7 @@ pub struct module {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct cmd_func {
-   pub _bindgen_data_: [u64; 1usize],
+   pub _bindgen_data_: [*mut c_void; 1usize],
 }
 impl cmd_func {
    pub unsafe fn no_args(&mut self) -> *mut Option<no_args_fn> {
@@ -714,7 +714,7 @@ pub struct ap_filter_rec_t {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct ap_filter_func {
-    pub _bindgen_data_: [u64; 1usize],
+    pub _bindgen_data_: [*mut c_void; 1usize],
 }
 impl ap_filter_func {
    pub unsafe fn out_func(&mut self) -> *mut Option<ap_out_filter_func> {

@@ -696,7 +696,7 @@ macro_rules! _declare_c_command_rec {
       $crate::ffi::command_rec {
          name: $name as *const u8 as *const $crate::c_char,
          func: $crate::ffi::cmd_func {
-            _bindgen_data_: [$cfunc as u64]
+            _bindgen_data_: [$cfunc as *mut $crate::c_void]
          },
          cmd_data: 0 as *mut $crate::c_void,
          req_override: $req_override,
